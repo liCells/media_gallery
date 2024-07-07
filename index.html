@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Personal Media Gallery</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="controls">
+                <div class="search-container">
+                    <input
+                        type="text"
+                        id="search"
+                        placeholder="Search for files"
+                    />
+                </div>
+                <select id="itemsPerRow">
+                    <option value="2">2 per row</option>
+                    <option value="3" selected>3 per row</option>
+                    <option value="4">4 per row</option>
+                    <option value="5">5 per row</option>
+                </select>
+            </div>
+            <div id="breadcrumbs"></div>
+            <div class="content-area">
+                <div class="loader">
+                    <div class="minecraft-loader">
+                        <div class="cube"></div>
+                        <div class="cube"></div>
+                        <div class="cube"></div>
+                        <div class="cube"></div>
+                    </div>
+                </div>
+                <div class="gallery" id="gallery"></div>
+                <div id="loadMore" style="display: none">Load More</div>
+            </div>
+        </div>
+
+        <div id="modal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg" />
+            <video class="modal-content" id="modalVideo" controls></video>
+        </div>
+
+        <script src="animation.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
